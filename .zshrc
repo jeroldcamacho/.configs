@@ -1,5 +1,5 @@
-# enable vim in zsh
-bindkey -v
+source ~/.zsh_alias
+export PATH=$PATH:/usr/local/go/bin
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -7,7 +7,8 @@ bindkey -v
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-ZSH_THEME="lukerandall"
+ZSH_THEME="gnzh"
+# ZSH_THEME="alanpeabody"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -56,11 +57,13 @@ ZSH_THEME="lukerandall"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git autopep8)
+export GIT_USERNAME=''
+export GIT_PASSWORD=''
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/zsh/.zsh_aliases
+source ~/.zsh/.zsh_aliases
 
 # User configuration
 
