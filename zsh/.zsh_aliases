@@ -1,5 +1,10 @@
 # ALL THANKS TO https://github.com/jazzpizazz/zsh-aliases
 
+list_commands() {
+ echo "list_ips, ls_pwd, tun0, www, code"
+ echo "\nnmap_tcp [IP] (options)\nnmap_udp [IP] (options)\ndirscan [IP] [small,medium,large] [file_name]\nsubscan website.com (options)"
+}
+
 list_ips() {
   ip a show scope global | awk '/^[0-9]+:/ { sub(/:/,"",$2); iface=$2 } /^[[:space:]]*inet / { split($2, a, "/"); print "[\033[96m" iface"\033[0m] "a[1] }'
 }
